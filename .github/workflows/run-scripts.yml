@@ -34,7 +34,6 @@ jobs:
     - name: Run fetch_data.py
       env:
         KEY: ${{ secrets.KEY }}
-        CREDS: ${{ secrets.CREDS }}
       run: |
        python fetch_data.py
 
@@ -45,6 +44,5 @@ jobs:
     - name: Run table.py
       env:
         KEY: ${{ secrets.KEY }}
-        CREDS: ${{ secrets.CREDS }}
       run: |
         python table.py
