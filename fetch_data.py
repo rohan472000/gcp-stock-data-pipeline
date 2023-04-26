@@ -18,7 +18,7 @@ print(f'Bucket {bucket_name} created.')
 
 # Fetch data with pandas_datareader
 api_key = os.getenv("KEY")
-df = pdr.get_data_tiingo('NDAQ', api_key))
+df = pdr.get_data_tiingo('NDAQ', api_key)
 
 # Convert DataFrame to CSV file
 csv_file = 'data.csv'
