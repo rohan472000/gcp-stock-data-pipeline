@@ -10,12 +10,12 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set Up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: 3.x
 
     - name: Install Dependencies
       run: |
@@ -26,7 +26,10 @@ jobs:
       env:
         KEY: ${{ secrets.KEY }}
         CREDS: ${{ secrets.CREDS }}
-      run: python fetch_data.py
+      run: |
+        ls -hal
+        echo CREDS > creds.json
+        python fetch_data.py
 
     - name: Run automate.py
       run: python automate.py
