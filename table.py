@@ -7,7 +7,7 @@ from google.oauth2 import service_account
 PROJECT_ID = 'clean-phoenix-378215'
 DATASET_ID = 'livestock'
 TABLE_ID = 'first_table'
-credentials = service_account.Credentials.from_service_account_file(os.getenv('creds'))
+credentials = service_account.Credentials.from_service_account_file(os.getenv('CREDS'))
 
 # Set up the BigQuery client
 client = bigquery.Client(credentials=credentials, project=PROJECT_ID)
