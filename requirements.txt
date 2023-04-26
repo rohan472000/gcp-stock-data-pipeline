@@ -5,3 +5,4 @@ pandas-datareader
 pandas
 google
 google-cloud
+python-dotenv
