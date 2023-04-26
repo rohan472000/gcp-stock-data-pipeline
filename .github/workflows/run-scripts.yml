@@ -3,6 +3,9 @@ name: Run Scripts
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [ "master" ]
+  
 
 jobs:
   run-scripts:
