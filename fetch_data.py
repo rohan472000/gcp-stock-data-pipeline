@@ -7,9 +7,15 @@ import os
 def configure():
     load_dotenv()
 
-creds = os.getenv("CREDS")
+## creds = os.getenv("CREDS")
 # Set your GCS credentials
-storage_client = storage.Client.from_service_account_json(creds)
+## storage_client = storage.Client.from_service_account_json(creds)
+from google.oauth2 import service_account
+
+# Set your GCS credentials
+creds = service_account.Credentials.from_service_account_info(auth['google'])
+storage_client = storage.Client(credentials=creds)
+
 bucket_name = 'rohan_bkk'
 # Create a new GCS bucket
 bucket = storage_client.create_bucket(bucket_name)
