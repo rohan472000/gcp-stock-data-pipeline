@@ -9,7 +9,7 @@ def configure():
 
 
 # Set your GCS credentials
-storage_client = storage.Client.from_service_account_json(os.getenv('GOOGLE_APPLICATION_CREDENTIALS'))
+storage_client = storage.Client.from_service_account_json(os.getenv('creds'))
 bucket_name = 'rohan_bkk'
 # Create a new GCS bucket
 bucket = storage_client.create_bucket(bucket_name)
