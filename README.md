@@ -7,6 +7,11 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 - DataProc PySpark
 - BigQuery
 
+## How to Run
+- Make a tiingo account from `api.tiingo.com` to access API to fetch coins data.
+- Make a service account with BigQuery and Dataproc editor or admin access, download that service account in JSON format.
+- Upload both api and service.json file keys in .env folder.
+
 ## Screen Shots
 ![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
 ![Screenshot (180)](https://user-images.githubusercontent.com/96521078/234498614-90e6424f-b22c-4fa0-a4ac-71e12986e6ac.png)
