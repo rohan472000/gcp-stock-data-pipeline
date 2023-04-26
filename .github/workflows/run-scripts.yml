@@ -23,10 +23,16 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run fetch_data.py
+      env:
+        key: ${{ secrets.key }}
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       run: python fetch_data.py
 
     - name: Run automate.py
       run: python automate.py
 
     - name: Run table.py
+      env:
+        key: ${{ secrets.key }}
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       run: python table.py
