@@ -13,8 +13,10 @@ def configure():
 from google.oauth2 import service_account
 
 # Set your GCS credentials
-auth = os.environ.get('CREDS')
-creds = service_account.Credentials.from_service_account_info(auth['google'])
+# auth = os.environ.get('CREDS')
+creds = os.getenv("CREDS")
+auth = service_account.Credentials.from_service_account_info(creds)
+print(type(auth))
 storage_client = storage.Client(credentials=creds)
 
 bucket_name = 'rohan_bkk'
