@@ -10,14 +10,13 @@ def configure():
 
 # Set your GCS credentials
 storage_client = storage.Client.from_service_account_json(os.getenv('GOOGLE_APPLICATION_CREDENTIALS'))
-bucket_name = 'tinngobucket'
+bucket_name = 'rohan_bkk'
 # Create a new GCS bucket
 bucket = storage_client.create_bucket(bucket_name)
 
 print(f'Bucket {bucket_name} created.')
 
 # Fetch data with pandas_datareader
-# key = "98434ewedsfb3ffvcfgrt655cdfewqa8895ggrhujuwe322mkuw"
 df = pdr.get_data_tiingo('NDAQ', api_key=os.getenv('key'))
 
 # Convert DataFrame to CSV file
