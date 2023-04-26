@@ -4,7 +4,7 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 ## Technologies used
 - Google Cloud Platform (GCP)
 - Tiingo API
-- DataProc PySpark
+- DataProc
 - BigQuery
 
 ## How to Run
