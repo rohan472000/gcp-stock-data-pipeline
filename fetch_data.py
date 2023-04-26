@@ -9,10 +9,10 @@ def configure():
     load_dotenv()
 
 # Create a storage_client using your GCS credentials
-creds_path = Path(__file__).resolve().parent / 'creds.json'
-creds_path.write_text(os.getenv("CREDS"))
-storage_client = storage.Client.from_service_account_json(str(creds_path))
-creds_path.unlink()  # immediately delete the creds
+gcs_key_path = Path(__file__).resolve().parent / 'service_account_key.json'
+gcs_key_path.write_text(os.getenv("KEY"))
+storage_client = storage.Client.from_service_account_json(str(gcs_key_path))
+gcs_key_path.unlink()  # immediately delete service_account_key.json'
 
 # Create a new GCS bucket
 bucket_name = 'rohan_bkk'
