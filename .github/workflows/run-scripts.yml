@@ -25,7 +25,7 @@ jobs:
     - name: Run fetch_data.py
       env:
         key: ${{ secrets.key }}
-        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        creds: ${{ secrets.creds }}
       run: python fetch_data.py
 
     - name: Run automate.py
@@ -34,5 +34,5 @@ jobs:
     - name: Run table.py
       env:
         key: ${{ secrets.key }}
-        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        creds: ${{ secrets.creds }}
       run: python table.py
