@@ -11,6 +11,7 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 - Make a tiingo account from `api.tiingo.com` to access API to fetch coins data.
 - Make a service account with BigQuery and Dataproc editor or admin access, download that service account in JSON format.
 - Upload both api and service.json file keys in .env folder.
+- Now run the github action through run-scripts.yml in `.github/workflows/run-scripts.yml`
 
 ## Screen Shots
 ![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
