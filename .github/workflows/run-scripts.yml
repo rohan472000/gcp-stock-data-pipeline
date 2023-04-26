@@ -26,10 +26,7 @@ jobs:
       env:
         KEY: ${{ secrets.KEY }}
         CREDS: ${{ secrets.CREDS }}
-      run: |
-        ls -hal
-        echo CREDS > creds.json
-        python fetch_data.py
+      run: python fetch_data.py
 
     - name: Run automate.py
       run: python automate.py
