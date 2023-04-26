@@ -7,7 +7,7 @@ import os
 def configure():
     load_dotenv()
 
-creds = os.getenv('CREDS')
+creds = os.getenv("CREDS")
 # Set your GCS credentials
 storage_client = storage.Client.from_service_account_json(creds)
 bucket_name = 'rohan_bkk'
@@ -17,7 +17,8 @@ bucket = storage_client.create_bucket(bucket_name)
 print(f'Bucket {bucket_name} created.')
 
 # Fetch data with pandas_datareader
-df = pdr.get_data_tiingo('NDAQ', api_key=os.getenv('KEY'))
+api_key = os.getenv("KEY")
+df = pdr.get_data_tiingo('NDAQ', api_key))
 
 # Convert DataFrame to CSV file
 csv_file = 'data.csv'
