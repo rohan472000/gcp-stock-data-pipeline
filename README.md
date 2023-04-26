@@ -13,6 +13,10 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 - Upload both api and service.json file keys in .env folder.
 - Now run the github action through run-scripts.yml in `.github/workflows/run-scripts.yml`
 
+## Precautions
+- Keep the bucket name same everywhere, if changing then then pay attention to worklfows.
+- Keep api key and service account key safe.
+
 ## Screen Shots
 ![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
 ![Screenshot (180)](https://user-images.githubusercontent.com/96521078/234498614-90e6424f-b22c-4fa0-a4ac-71e12986e6ac.png)
