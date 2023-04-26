@@ -29,13 +29,16 @@ jobs:
       env:
         KEY: ${{ secrets.KEY }}
         CREDS: ${{ secrets.CREDS }}
-      run: python fetch_data.py
+      run: |
+       python fetch_data.py
 
     - name: Run automate.py
-      run: python automate.py
+      run: |
+       python automate.py
 
     - name: Run table.py
       env:
         KEY: ${{ secrets.KEY }}
         CREDS: ${{ secrets.CREDS }}
-      run: python table.py
+      run: |
+        python table.py
