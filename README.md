@@ -1,5 +1,5 @@
 # GCP Crypto Data Pipeline
-This project fetches the latest coins data for NDAQ from the Tiingo API, performs ETL transformations using DataProc PySpark cluster, and loads the processed data into BigQuery. The ETL process includes data cleansing, filtering, and aggregation.
+This project fetches the latest coins data for NDAQ from the Tiingo API, performs ETL transformations using DataProc PySpark cluster, and loads the processed data into BigQuery. This is fully automated project means no human intervention needed as I used scripts to make infra and other things in GCP.
 
 ## Technologies used
 - Google Cloud Platform (GCP)
