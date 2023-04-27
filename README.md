@@ -13,9 +13,73 @@ This project fetches the latest data for NDAQ from the Tiingo API, performs ETL 
 - Upload both api and service.json file keys in .env folder.
 - Now run the github action through run-scripts.yml in `.github/workflows/run-scripts.yml`
 
+
+## Architecture
+                                +----------------+
+                                |    Tiingo API  |
+                                +----------------+
+                                          |
+                                          |
+                                          |
+                                          v
+                                +----------------+
+                                |                |
+                                |   Fetch Latest |
+                                |     Stock Data |
+                                |                |
+                                +-------+--------+
+                                        |
+                                        |
+                                        |
+                                        v
+                          +-------------+------------+
+                          |                          |
+                          |     GitHub Repository    |
+                          |                          |
+                          +-------------+------------+
+                                        |
+                                        |
+                                        |
+                                        v
+                    +-------------------+------------------+
+                    |                                      |
+                    |          GitHub Actions              |
+                    |  (Automated ETL Pipeline)            |
+                    |                                      |
+                    +-------------------+------------------+
+                                        |
+                                        |
+                                        |
+                          +-------------v------------+
+                          |                          |
+                          |     DataProc PySpark     |
+                          |                          |
+                          +-------------+------------+
+                                        |
+                                        |
+                                        |
+                                        v
+                           +--------------+-------------+
+                           |                            |
+                           |           BigQuery         |
+                           |                            |
+                           +--------------+-------------+
+                                          |
+                                          |
+                                          |
+                                          v
+                                +----------------+
+                                |                |
+                                |   Processed    |
+                                |   Stock Data   |
+                                |                |
+                                +----------------+
+
+
 ## Precautions
 - Keep the bucket name same everywhere, if changing then then pay attention to worklfows.
 - Keep api_key and service_account_key safe.
+
 
 ## Screen Shots
 ![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
