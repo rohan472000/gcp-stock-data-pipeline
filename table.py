@@ -48,7 +48,7 @@ except:
         table = client.create_table(table)
         print(f'Table {table.project}.{table.dataset_id}.{table.table_id} created')
     else:
-        print(f"Table '{table_ref.table_id}' already exists in dataset '{dataset_ref.dataset_id}'. Skipping creation.")
+        print(f"Table '{table_ref.table_id}' already exists in dataset '{DATASET_ID}'. Skipping creation.")
 
 
 import pandas as pd
