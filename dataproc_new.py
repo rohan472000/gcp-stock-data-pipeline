@@ -9,7 +9,7 @@ bucket_name = 'rohan_bkk'
 file_path = 'gs://rohan_bkk/data.csv'
 output_path = 'gs://rohan_bkk/new_data.csv'
 # Create a SparkSession
-spark = SparkSession.builder.appName('BitcoinETL').getOrCreate()
+spark = SparkSession.builder.appName('ETL').getOrCreate()
 
 # Load the CSV file from GCS into a PySpark DataFrame
 df = spark.read.csv(file_path, header=True, inferSchema=True)

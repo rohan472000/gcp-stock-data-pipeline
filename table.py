@@ -37,10 +37,18 @@ except:
         bigquery.SchemaField("average", "FLOAT"),
     ]
 
-    # Create the BigQuery table
-    table = bigquery.Table(table_ref, schema=schema)
-    table = client.create_table(table)
-    print(f'Table {table.project}.{table.dataset_id}.{table.table_id} created')
+    # # Create the BigQuery table
+    # table = bigquery.Table(table_ref, schema=schema)
+    # table = client.create_table(table)
+    # print(f'Table {table.project}.{table.dataset_id}.{table.table_id} created')
+    # Check if table already exists
+    if not client.exists(table_ref):
+        # Create the BigQuery table
+        table = bigquery.Table(table_ref, schema=schema)
+        table = client.create_table(table)
+        print(f'Table {table.project}.{table.dataset_id}.{table.table_id} created')
+    else:
+        print(f"Table '{table_ref.table_id}' already exists in dataset '{dataset_ref.dataset_id}'. Skipping creation.")
 
 
 import pandas as pd
