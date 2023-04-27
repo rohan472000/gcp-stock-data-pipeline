@@ -1,5 +1,5 @@
 # GCP Stock Data Pipeline
-This project fetches the latest coins data for NDAQ from the Tiingo API, performs ETL transformations using DataProc PySpark cluster, and loads the processed data into BigQuery. This is fully automated project means no human intervention needed as I used scripts to make infra and other things in GCP.
+This project fetches the latest data for NDAQ from the Tiingo API, performs ETL transformations using DataProc PySpark cluster, and loads the processed data into BigQuery. This is fully automated project means no human intervention needed as I used scripts to make infra and other things in GCP.
 
 ## Technologies used
 - Google Cloud Platform (GCP)
@@ -8,7 +8,7 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 - BigQuery
 
 ## How to Run
-- Make a tiingo account from `api.tiingo.com` to access API to fetch coins data.
+- Make a tiingo account from `api.tiingo.com` to access API to fetch data.
 - Make a service account with BigQuery and Dataproc editor or admin access, download that service account in JSON format.
 - Upload both api and service.json file keys in .env folder.
 - Now run the github action through run-scripts.yml in `.github/workflows/run-scripts.yml`
