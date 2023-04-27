@@ -15,7 +15,7 @@ This project fetches the latest coins data for NDAQ from the Tiingo API, perform
 
 ## Precautions
 - Keep the bucket name same everywhere, if changing then then pay attention to worklfows.
-- Keep api key and service account key safe.
+- Keep api_key and service_account_key safe.
 
 ## Screen Shots
 ![Screenshot (178)](https://user-images.githubusercontent.com/96521078/234498540-6f22a89f-4bbf-4ef3-84ed-74bf006160e5.png)
