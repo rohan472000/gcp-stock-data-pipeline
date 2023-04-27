@@ -44,7 +44,7 @@ This project fetches the latest data for NDAQ from the Tiingo API, performs ETL 
                     +-------------------+------------------+
                     |                                      |
                     |          GitHub Actions              |
-                    |  (Automated ETL Pipeline)            |
+                    |      (Automated ETL Pipeline)        |
                     |                                      |
                     +-------------------+------------------+
                                         |
